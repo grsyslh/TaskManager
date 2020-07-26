@@ -21,7 +21,7 @@ else
 
 
 <p>
-    <a asp-action="Create" class="btn btn-block btn-outline-success font-weight-bold mt-4">Yeni Görev Planla</a>
+    <a asp-action="Create" class="btn btn-block btn-outline-success font-weight-bold mt-4"><i class="fas fa-plus-circle"></i> Yeni Görev Planla</a>
 </p>
 
 
@@ -59,9 +59,9 @@ else
                         @Html.DisplayFor(modelItem => item.TaskDate)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.TasksId" class="btn btn-primary"><i class="fas fa-edit"></i> Güncelle</a> |
-                        <a asp-action="Details" asp-route-id="@item.TasksId" class="btn btn-warning"><i class="fas fa-info-circle"></i> Detaylar </a> |
-                        <a asp-action="Delete" asp-route-id="@item.TasksId" class="btn btn-danger"><i class="fas fa-trash"></i> Sil</a>
+                        <a asp-action="Edit" asp-route-id="@item.TasksId" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i> Güncelle</a> |
+                        <a asp-action="Details" asp-route-id="@item.TasksId" class="btn btn-sm btn-warning"><i class="fas fa-info-circle"></i> Detaylar </a> |
+                        <a asp-action="Delete" asp-route-id="@item.TasksId" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i> Sil</a>
                     </td>
                 </tr>
             }
