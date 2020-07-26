@@ -1,0 +1,31 @@
+﻿@using TaskManager.Entity;
+@model List<Tasks>
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Görev Yöneticisine Hoşgeldiniz.</h1>
+</div>
+
+<div class="btn btn-warning">Görev Oluştur</div>
+<div class="btn btn-primary">Görevleri Listele</div>
+
+<div class="text-center mt-5">
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>Görev Başlığı</th>
+            <th>İçerik</th>
+            <th>Tarih</th>
+        </tr>
+        @foreach (Tasks task in Model)
+        {
+            <tr>
+                <td>@task.Header</td>
+                <td>@task.Body</td>
+                <td>@task.TaskDate</td>
+            </tr>
+        }
+
+    </table>
+</div>
