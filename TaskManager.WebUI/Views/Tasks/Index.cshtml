@@ -66,14 +66,16 @@ else
 }
 else
 {
-    <div class="splashscreen">
-        <div class="text-center">
-            <h1 class="display-4">Görev Yöneticisine Hoşgeldiniz.</h1>
-            <hr />
-            <img src="~/img/calendar.png" alt="Calender Icon" class="h-auto" style="width:20rem;" />
+    @if (String.IsNullOrEmpty(queryString))
+    {
+        <div class="splashscreen">
+            <div class="text-center">
+                <h1 class="display-4">Görev Yöneticisine Hoşgeldiniz.</h1>
+                <hr />
+                <img src="~/img/calendar.png" alt="Calender Icon" class="h-auto" style="width:20rem;" />
+            </div>
         </div>
-    </div>
-
+    }
     <div class="my-2 mt-4">
         <p class="text-center m-0 font-weight-bold" style="font-size:58px; line-height:10px;">^</p>
         <p class="text-center m-0 font-weight-bold" style="font-size:25px; line-height:12px;">||</p>
